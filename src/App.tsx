@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Route, Routes, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import SearchView from "./SearchView";
@@ -12,8 +12,10 @@ const money = (value: number, currency: string) => `${new Intl.NumberFormat("en-
 
 function Layout({ children }: { children: React.ReactNode }) {
   const queryClient = useQueryClient(); const navigate = useNavigate(); const user = useQuery({ queryKey: ["me"], queryFn: me, retry: false });
+  const [theme, setTheme] = useState<"light" | "dark">(() => localStorage.getItem("thadin-theme") === "dark" ? "dark" : "light");
+  useEffect(() => { document.documentElement.dataset.theme = theme; localStorage.setItem("thadin-theme", theme); }, [theme]);
   const signOut = async () => { await logout().catch(() => undefined); await queryClient.invalidateQueries({ queryKey: ["me"] }); navigate("/"); };
-  return <><header className="topbar"><Link className="brand" to="/"><span className="brand-mark">T</span><span>thadin</span></Link><nav><Link to="/search">Explore homes</Link>{user.data ? <><Link to="/dashboard">Dashboard</Link><button className="link-button" onClick={signOut}>Log out</button></> : <Link className="button small" to="/auth/login">Sign in</Link>}</nav></header><main>{children}</main><footer><div><span className="brand"><span className="brand-mark">T</span>thadin</span><p>Property search for the places that feel like home.</p></div><span>Yangon · Mandalay · Bago</span></footer></>;
+  return <><header className="topbar"><Link className="brand" to="/"><span className="brand-mark">T</span><span>thadin</span></Link><nav><Link to="/search">Explore homes</Link><button className="theme-toggle" type="button" onClick={() => setTheme((current) => current === "light" ? "dark" : "light")} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`} title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}><span aria-hidden="true">{theme === "light" ? "☾" : "☀"}</span><span>{theme === "light" ? "Dark" : "Light"} mode</span></button>{user.data ? <><Link to="/dashboard">Dashboard</Link><button className="link-button" onClick={signOut}>Log out</button></> : <Link className="button small" to="/auth/login">Sign in</Link>}</nav></header><main>{children}</main><footer><div><span className="brand"><span className="brand-mark">T</span>thadin</span><p>Property search for the places that feel like home.</p></div><span>Yangon · Mandalay · Bago</span></footer></>;
 }
 
 function SearchBox() { const [params] = useSearchParams(); const [keyword, setKeyword] = useState(params.get("keyword") ?? ""); const navigate = useNavigate(); return <form className="search-box" onSubmit={(e) => { e.preventDefault(); navigate(`/search?keyword=${encodeURIComponent(keyword)}`); }}><span className="search-icon">⌕</span><input value={keyword} onChange={(e) => setKeyword(e.target.value)} placeholder="Search by city, neighborhood, or property"/><button className="button" type="submit">Search homes</button></form>; }

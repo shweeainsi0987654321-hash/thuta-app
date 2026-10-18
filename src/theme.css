@@ -1,0 +1,205 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+  background: #101715;
+  color: #e7eeea;
+}
+
+html[data-theme="dark"] body {
+  background: #101715;
+  color: #e7eeea;
+}
+
+html[data-theme="dark"] .topbar,
+html[data-theme="dark"] footer {
+  background: #141e1b;
+  border-color: #2b3934;
+  color: #a8b8b0;
+}
+
+html[data-theme="dark"] .hero {
+  background: #1a2924;
+}
+
+html[data-theme="dark"] .hero-subtitle,
+html[data-theme="dark"] .page-heading > p:not(.eyebrow),
+html[data-theme="dark"] .dashboard-heading > div > p:not(.eyebrow),
+html[data-theme="dark"] .search-intro > div > p:not(.eyebrow),
+html[data-theme="dark"] .detail-description,
+html[data-theme="dark"] .contact-card p,
+html[data-theme="dark"] .auth-card label {
+  color: #a8b8b0;
+}
+
+html[data-theme="dark"] .sun {
+  background: #384b3d;
+}
+
+html[data-theme="dark"] .building {
+  background: #49665b;
+  box-shadow: inset 0 0 0 1px #5d786c;
+}
+
+html[data-theme="dark"] .b2 { background: #78654d; }
+html[data-theme="dark"] .b3 { background: #79584d; }
+
+html[data-theme="dark"] .art-card,
+html[data-theme="dark"] .listing-card,
+html[data-theme="dark"] .result-card,
+html[data-theme="dark"] .filter-panel,
+html[data-theme="dark"] .state,
+html[data-theme="dark"] .auth-card,
+html[data-theme="dark"] .form-section,
+html[data-theme="dark"] .management-card,
+html[data-theme="dark"] .admin-table {
+  background: #18221f;
+  border-color: #2b3934;
+  color: #e7eeea;
+}
+
+html[data-theme="dark"] .art-card span,
+html[data-theme="dark"] .art-card small,
+html[data-theme="dark"] .listing-content p,
+html[data-theme="dark"] .listing-content small,
+html[data-theme="dark"] .result-location,
+html[data-theme="dark"] .result-facts,
+html[data-theme="dark"] .management-info p,
+html[data-theme="dark"] .management-info .status-line,
+html[data-theme="dark"] .results-count,
+html[data-theme="dark"] .active-filters,
+html[data-theme="dark"] .form-note,
+html[data-theme="dark"] .search-summary span,
+html[data-theme="dark"] .loading {
+  color: #a8b8b0;
+}
+
+html[data-theme="dark"] .listing-content h3,
+html[data-theme="dark"] .result-card-title h3,
+html[data-theme="dark"] .art-card strong,
+html[data-theme="dark"] .admin-listing-cell,
+html[data-theme="dark"] .facts b {
+  color: #e7eeea;
+}
+
+html[data-theme="dark"] .filter-field input,
+html[data-theme="dark"] .filter-field select,
+html[data-theme="dark"] .filter-search input,
+html[data-theme="dark"] .filters input,
+html[data-theme="dark"] .filters select,
+html[data-theme="dark"] .form-grid input,
+html[data-theme="dark"] .form-grid select,
+html[data-theme="dark"] .form-grid textarea,
+html[data-theme="dark"] .auth-card input {
+  background: #111a17;
+  border-color: #3a4943;
+  color: #e7eeea;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #809188;
+}
+
+html[data-theme="dark"] .filter-main,
+html[data-theme="dark"] .filter-secondary,
+html[data-theme="dark"] .form-section-heading,
+html[data-theme="dark"] .facts,
+html[data-theme="dark"] .result-facts,
+html[data-theme="dark"] .admin-toolbar,
+html[data-theme="dark"] .admin-table-row {
+  border-color: #2b3934;
+}
+
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .stats-row > div,
+html[data-theme="dark"] .admin-table-head,
+html[data-theme="dark"] .management-thumb,
+html[data-theme="dark"] .admin-thumb {
+  background: #202f29;
+  border-color: #34483e;
+}
+
+html[data-theme="dark"] .upload-drop {
+  background: #17231e;
+  border-color: #547365;
+  color: #a8b8b0;
+}
+
+html[data-theme="dark"] .management-actions button,
+html[data-theme="dark"] .admin-toolbar button,
+html[data-theme="dark"] .admin-actions button {
+  background: #18221f;
+  border-color: #3a4943;
+  color: #a8d4c2;
+}
+
+html[data-theme="dark"] .admin-toolbar button.active {
+  background: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+
+html[data-theme="dark"] .admin-table-head {
+  color: #a8c2b4;
+}
+
+html[data-theme="dark"] .admin-table-row {
+  color: #bdcbc4;
+}
+
+html[data-theme="dark"] .image-placeholder,
+html[data-theme="dark"] .listing-image,
+html[data-theme="dark"] .result-card-image,
+html[data-theme="dark"] .gallery-main {
+  background: #24342e;
+  color: #a8b8b0;
+}
+
+html[data-theme="dark"] .pill.dark {
+  background: #263d34;
+  color: #b4dfcc;
+}
+
+html[data-theme="dark"] .filter-chip {
+  background: #263d34;
+  color: #b4dfcc;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  color: #f1d994;
+  background: #26352f;
+  border-color: #40534a;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid #d8dfd8;
+  border-radius: 5px;
+  background: #fff;
+  color: #33433f;
+  font: 500 12px 'DM Sans', sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  border-color: #0f766e;
+}
+
+.theme-toggle span:first-child {
+  font-size: 17px;
+  line-height: 1;
+}
+
+@media (max-width: 560px) {
+  .theme-toggle {
+    padding: 7px 8px;
+    font-size: 0;
+  }
+
+  .theme-toggle span:first-child {
+    font-size: 18px;
+  }
+}
